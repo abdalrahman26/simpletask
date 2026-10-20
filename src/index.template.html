@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f4f7fc">
+<meta name="description" content="simple task innovalz — إدارة التاسكات والعملاء والمبيعات للفريق">
+<title>simple task innovalz</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231d5cff'/%3E%3Cpath d='M18 33l9 9 19-20' fill='none' stroke='white' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>try{var p=JSON.parse(localStorage.getItem('mynd_prefs_v2')||'{}');if(p.theme==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}</script>
+<style>
+/*__CSS__*/
+</style>
+</head>
+<body>
+<div id="app">
+  <header id="topbar" class="topbar" hidden></header>
+  <main id="view" class="view"></main>
+  <nav id="bottomnav" class="bottomnav" aria-label="التنقل"></nav>
+</div>
+
+<button id="chatFab" class="chat-fab" data-act="chatToggle" aria-label="محادثة الشركة" hidden>
+  <svg class="ic" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 14a2 2 0 0 1-2 2H8l-5 4V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 12.5h5"/></svg>
+  <span class="badge" id="chatBadge" hidden>0</span>
+</button>
+<section id="chat" class="chat" hidden aria-label="محادثة الشركة">
+  <div class="chat-h">
+    <span class="ch-ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 14a2 2 0 0 1-2 2H8l-5 4V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+    <div style="flex:1;min-width:0"><b>محادثة الشركة <i></i></b><small>فريق العمل متاح للجميع</small></div>
+    <button class="ic-btn" data-act="chatClose" aria-label="تصغير"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/></svg></button>
+    <button class="ic-btn" data-act="chatClose" aria-label="إغلاق"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  </div>
+  <div class="chat-info"><span>👥 محادثة نصية للجميع</span><span class="no">🚫 إرسال الصور غير متاح</span></div>
+  <div class="chat-list" id="chatList"></div>
+  <div class="chat-emo">
+    <button data-act="chatEmoji" data-e="👍">👍</button><button data-act="chatEmoji" data-e="👏">👏</button><button data-act="chatEmoji" data-e="🎯">🎯</button><button data-act="chatEmoji" data-e="🔥">🔥</button><button data-act="chatEmoji" data-e="✅">✅</button><button data-act="chatEmoji" data-e="❤️">❤️</button><button data-act="chatEmoji" data-e="🙏">🙏</button><button data-act="chatEmoji" data-e="🎉">🎉</button>
+  </div>
+  <div class="chat-in">
+    <input id="chatInput" data-key="chatInput" placeholder="اكتب رسالة للشركة (Enter للإرسال)..." maxlength="1000" autocomplete="off">
+    <button data-act="chatSend" aria-label="إرسال"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg></button>
+  </div>
+</section>
+
+<div id="modal" class="layer"></div>
+<div id="browser" class="layer"></div>
+<div id="confirm" class="layer"></div>
+<div id="toasts" class="toasts" aria-live="polite"></div>
+
+<script>
+/*__JS__*/
+</script>
+</body>
+</html>
